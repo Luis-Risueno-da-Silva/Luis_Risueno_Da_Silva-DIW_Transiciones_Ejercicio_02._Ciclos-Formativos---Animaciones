@@ -1,0 +1,272 @@
+@font-face {
+	font-family: mothership;
+	src: url('../fuentes/Nemesia-regular.ttf') format('truetype');
+}
+
+body {
+	background-image: url("../imagenes/fondoppal.jpg");
+	overflow: hidden;
+}
+
+.header {
+	position: relative;
+	margin-bottom: 20px;
+	background-image: url("../imagenes/encabezado.png");
+
+	animation-name: muevecabecera;
+	animation-duration: 6s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes muevecabecera {
+	0% {
+		left: -1500px;
+		opacity: 0;
+	}
+
+	40% {
+		left: 500px;
+		opacity: 0.75;
+	}
+
+	90% {
+		left: -500px;
+		opacity: 0.75;
+	}
+
+	100% {
+		left: 0px;
+		opacity: 1;
+	}
+}
+
+.header__title {
+	font-size: 4em;
+	color: #aaa;
+	text-align: center;
+	padding: 10px 0px;
+	word-spacing: 2px;
+	font-variant: small-caps;
+	font-family: tahoma;
+}
+
+.header__link {
+	text-decoration: none;
+}
+
+.contenedor {
+	margin: 0px auto;
+	padding-bottom: 0.75rem;
+	max-width: 1200px;
+	border-radius: 3px;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.03);
+
+	animation-name: muevecontenedor;
+	/* Añade las propiedades de la animación AQUI*/
+	animation-duration: 5s;
+	/* animation-delay: 2s; */
+	/* animation-fill-mode: forwards; */
+}
+
+@keyframes muevecontenedor {
+	/* Añade los fotogramas clave AQUI*/
+
+	0%{
+		opacity: 0;
+		transform: scale(0) rotate(180deg);
+	}
+	50%{
+		opacity: 0.5;
+		transform: scale(0.5) rotate(0deg);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+
+}
+
+
+.nav {
+	margin-bottom: 20px;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .09);
+
+	animation-name: muevenav;
+	/* Añade las propiedades de la animación AQUI*/
+	animation-duration: 5s;
+	/* animation-delay: 2s; */
+}
+
+
+@keyframes muevenav {
+	/* Añade los fotogramas clave AQUI*/
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+
+}
+
+.visor {
+	margin: 0px auto;
+	width: 1000px;
+	height: 350px;
+	border-radius: 3px;
+	background-image: url("../imagenes/visor4.png");
+}
+
+
+.article-text {
+	position: relative;
+	width: 250px;
+	height: 320px;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: justify;
+	padding: 15px;
+	font-size: 0.75em;
+	letter-spacing: 0.05em;
+	font-family: arial;
+	color: #fff;
+	border-radius: 2px;
+	line-height: 1.05em;
+	/* text-align: end; */
+
+	animation-name: muevetexto;
+	/* Añade las propiedades de la animación AQUI*/
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes muevetexto {
+	/* Añade los fotogramas clave AQUI*/
+	0%{
+		transform: rotateY(360deg);
+	}
+	50%{
+		left: 300px;
+	}
+	100%{
+		left: 700px;
+		transform: rotateY(0deg);
+	}
+}
+
+.article-text__title {
+	background-color: rgba(255, 255, 255, 0.4);
+	text-align: center;
+	padding: 5px;
+	border-bottom: 1 px solid #fff;
+	border-radius: 2px;
+	margin-bottom: 20px;
+}
+
+.article-text__text {
+	margin: 1rem;
+}
+
+.form {
+	color: #6a6a6a;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 0.9em;
+	font-family: arial;
+}
+
+.form__label {
+	font-size: 0.6rem;
+}
+
+.form__input {
+	background-color: #f2f2f2;
+	border-radius: 2px;
+	width: 75px;
+	border: none;
+	outline: none;
+	border: 0.01rem solid #ccc;
+}
+
+.form__button {
+	width: 30px;
+	border: none;
+	outline: none;
+	font-variant: small-caps;
+	background-color: #f0ecec;
+}
+
+.footer {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	margin: 10px;
+	text-align: center;
+	opacity: 0;
+
+	animation-name: muevepie;
+	/* Añade las propiedades de la animación AQUI*/
+	animation-delay: 2s;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes muevepie {
+	/* Añade los fotogramas clave AQUI*/
+	0%{
+		right: -1200px;
+		opacity: 0;
+	}
+	100%{
+		right: 0px;
+		opacity: 1;
+	}
+}
+
+.box {
+	position: relative;
+	background-color: rgba(0, 0, 0, .09);
+	border: 1px solid #d9d9d9;
+	width: 27%;
+	height: 100px;
+	font-family: verdana;
+	color: #6a6a6a;
+	overflow: auto;
+	padding: 15px;
+	margin-left: 10px;
+	border-radius: 3px;
+	font-weight: bold;
+	/* Necesitas añadir algo ???? */
+}
+
+.box:hover {
+	/* Necesitas añadir algo ???? */
+}
+
+.box__title {
+	text-align: left;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: arial;
+	border-radius: 2px;
+	margin: 0;
+}
+
+.box__box {
+	position: absolute;
+	right: 25px;
+	width: 175px;
+	margin: 10px 5px 0px 25px;
+	padding: 15px;
+	background-color: #f2f2f2;
+	border: 1px solid #d9d9d9;
+	font-size: 0.5em;
+	text-align: left;
+	border-radius: 3px;
+}
+
+.box__text {
+	margin-bottom: 0.5em;
+}
+
